@@ -9,7 +9,8 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "stylelint": "stylelint src/**/*.scss"
   },
   "web": "dist/index.html",
   "targets": {
@@ -35,6 +36,7 @@
   },
   "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
   "devDependencies": {
+    "@namics/stylelint-bem": "^8.1.0",
     "@parcel/transformer-sass": "^2.8.3",
     "autoprefixer": "^10.4.13",
     "npm-run-all": "^4.1.5",
@@ -42,7 +44,10 @@
     "postcss-preset-env": "^7.8.3",
     "posthtml-include": "^1.7.4",
     "rimraf": "^3.0.2",
-    "sharp": "0.31.1"
+    "sharp": "0.31.1",
+    "stylelint": "^15.4.0",
+    "stylelint-config-recommended-scss": "^9.0.1",
+    "stylelint-scss": "^4.6.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
