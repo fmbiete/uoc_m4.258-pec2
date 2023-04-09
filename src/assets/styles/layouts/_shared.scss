@@ -1,9 +1,9 @@
 /*------------------------------------*\
-  # Page - Home
+  # Page - Shared
 \*------------------------------------*/
 
 // ITCSS - Generic - Generic styles
-// @import "home/generics";
+@import "shared/generics";
 
 // // ITCSS - Elements - Styles for some tags
 // @import "home/elements/cites";
@@ -12,13 +12,14 @@
 // @import "home/elements/pictures";
 
 
-// // ITCSS - Objects
-// @import "home/objects/fonts";
+// ITCSS - Objects
+@import "shared/objects/fonts";
 
-// // ITCSS - Components in the page
-// @import 'home/components/header';
-// @import 'home/components/main';
+
+// ITCSS - Components in the page
+@import 'shared/components/header';
+@import 'shared/components/main';
 // @import 'home/components/summary';
 // @import 'home/components/gallery';
 // @import 'home/components/footnotes';
-// @import 'home/components/footer';
+@import 'shared/components/footer';
