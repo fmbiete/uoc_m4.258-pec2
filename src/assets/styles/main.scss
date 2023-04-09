@@ -14,9 +14,11 @@
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
  */
-
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+ @import "npm:@fortawesome/fontawesome-free/css/all.css";
+ @import "bootstrap/scss/bootstrap";
+
 
 /**
  * Import layouts
