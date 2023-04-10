@@ -9,7 +9,12 @@
 }
 
 .o-footer-dark {
-  background-color: $uoc-bg;
+  background-color: var(--bs-gray-900);
+  color: var(--bs-light);
+
+  a {
+    color: var(--bs-danger);
+  }
 }
 
 .o-footer__copy {

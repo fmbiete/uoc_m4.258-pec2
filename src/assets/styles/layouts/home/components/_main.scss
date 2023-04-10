@@ -8,24 +8,42 @@
 }
 
 .o-main--grid {
-  margin: 0;
+  margin: 100;
 
   display: grid;
 
   // 100x100 cells
-  grid-template-columns: repeat(11, 100px);
-  grid-auto-rows: 100px;
+  // grid-template-columns: repeat(7, 200px);
+  // grid-auto-rows: 100px;
+  
+  grid-template-columns: 1fr 2fr 2fr 1fr 2fr 2fr 2fr;
+  grid-template-rows: masonry;
+  grid-gap: 10px;
   grid-template-areas: 
-    "pl pl intro  intro    e1       e1       e1       e2       e3       pr pr"
-    "pl pl title  title    title    title    dots1    e2       e3       pr pr"
-    "pl pl title  title    title    title    join     join     e3       pr pr"
-    "pl pl imgpri imgpri   imgpri   e4       about    about    about    pr pr"
-    "pl pl imgpri imgpri   imgpri   e4       about    about    about    pr pr"
-    "pl pl imgpri imgpri   imgpri   e4       imgsec   imgsec   imgsec   pr pr"
-    "pl pl imgpri imgpri   imgpri   e4       imgsec   imgsec   imgsec   pr pr"
-    "pl pl dots2  playjoin playjoin playjoin playdate playdate playdate pr pr"
+    "dots1  dots1  intro    intro    dots3   lessons lessons"
+    "dots1  dots1  title    title    dots3   dots2   dots2"
+    "book   book   title    title    dots3   dots2   dots2"
+    "imgpri imgpri imgpri   none     dots3   about   about"
+    "imgpri imgpri imgpri   join     dots3   about   about"
+    "imgpri imgpri imgpri   dots5    imgsec  imgsec  imgsec"
+    "imgpri imgpri imgpri   dots5    imgsec  imgsec  imgsec"
+    "dots4  dots4  playjoin playjoin playloc playloc playdate"
   ;
   align-items: center;
+
+  font-weight: 900;
+
+  > * {
+    min-width: 0px;
+  }
+}
+
+.o-main--grid__book {
+  grid-area: book;
+}
+
+.o-main--grid__lessons {
+  grid-area: lessons;
 }
 
 .o-main--grid__image--primary {
@@ -34,7 +52,7 @@
 
   img {
     width: 100%;
-    max-height: 100%;  
+    height: 100%;
   }
 }
 
@@ -51,15 +69,16 @@
 
 .o-main--grid__intro {
   grid-area: intro;
-  align-self: self-end;
+  text-align: center;
 
   h2 {
-    font-weight: 600;
+    font-weight: 900;
   }
 }
 
 .o-main--grid__title {
   grid-area: title;
+  text-align: center;
   
   h1 {
     font-weight: 900;
@@ -69,24 +88,20 @@
     
 .o-main--grid__join {
   grid-area: join;
-  align-self: self-start;
-  border-left: 2px solid orange;
-  padding-left: 10px;
-
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-  }
 }
 
 .o-main--grid__about {
   grid-area: about;
+  font-weight: 300;
+
+  h4 {
+    font-weight: 900;
+  }
 }
 
 .o-main--grid__dots {
   height: 100%;
-  background-image: radial-gradient(orange 1px, transparent 0);
+  background-image: radial-gradient($uoc-bg 1px, transparent 0);
   background-size: 5px 5px;
   background-position: -2px -2px;
 
@@ -96,34 +111,49 @@
   &-two {
     grid-area: dots2;
   }
+  &-three {
+    grid-area: dots3;
+  }
+  &-four {
+    grid-area: dots4;
+  }
+  &-five {
+    grid-area: dots5;
+  }
 }
 
 .o-main--grid__play-join {
   grid-area: playjoin;
-  align-self: self-end;
-  text-align: right;
-  border-right: 2px solid orange;
-  padding-right: 10px;
-
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-  }
 }
 
 .o-main--grid__play-date {
   grid-area: playdate;
-  align-self: self-end;
+}
+
+.o-main--grid__play-loc {
+  grid-area: playloc;
   text-align: right;
 
   h5 {
-    padding-top: 10px;
+    // We need to override bootstrap defaults
     font-weight: 600;
-    line-height: 1rem;
+  }
+}
+
+.o-main--grid__action {
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
-  p {
-    line-height: 0;
+  &-left {
+    border-left: 2px solid orange;
+    padding-left: 10px;
+  }
+
+  &-right {
+    text-align: right;
+    border-right: 2px solid orange;
+    padding-right: 10px;
   }
 }
