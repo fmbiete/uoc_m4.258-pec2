@@ -1,9 +1,9 @@
 /*------------------------------------*\
-  # Page - Home
+  # Page - Two
 \*------------------------------------*/
 
 // ITCSS - Generic - Generic styles
-// @import "home/generics";
+@import "two/generics";
 
 // // ITCSS - Elements - Styles for some tags
 // @import "home/elements/cites";
@@ -15,9 +15,9 @@
 // // ITCSS - Objects
 // @import "home/objects/fonts";
 
-// // ITCSS - Components in the page
-// @import 'home/components/header';
-@import 'home/components/main';
+// ITCSS - Components in the page
+@import 'two/components/main';
+@import 'two/components/member';
 // @import 'home/components/summary';
 // @import 'home/components/gallery';
 // @import 'home/components/footnotes';

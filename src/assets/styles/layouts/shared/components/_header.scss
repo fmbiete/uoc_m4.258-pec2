@@ -1,3 +1,12 @@
 /*------------------------------------*\
   # Component - Header
 \*------------------------------------*/
+
+.o-header {
+  margin: 0;
+}
+
+.o-header__brand {
+  font-weight: 900;
+  text-transform: uppercase;
+}

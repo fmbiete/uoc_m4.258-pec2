@@ -24,7 +24,8 @@
  * It's a best practice to use a different partial for each page
  */
 @import "layouts/shared";
-// @import "layouts/home";
+@import "layouts/home";
+@import "layouts/two";
 
 /**
  * Do NOT include anything else in this file!

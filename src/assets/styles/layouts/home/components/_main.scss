@@ -1,0 +1,129 @@
+/*------------------------------------*\
+  # Component - Main
+\*------------------------------------*/
+
+.o-main {
+  background-color: black;
+  color: white;
+}
+
+.o-main--grid {
+  margin: 0;
+
+  display: grid;
+
+  // 100x100 cells
+  grid-template-columns: repeat(11, 100px);
+  grid-auto-rows: 100px;
+  grid-template-areas: 
+    "pl pl intro  intro    e1       e1       e1       e2       e3       pr pr"
+    "pl pl title  title    title    title    dots1    e2       e3       pr pr"
+    "pl pl title  title    title    title    join     join     e3       pr pr"
+    "pl pl imgpri imgpri   imgpri   e4       about    about    about    pr pr"
+    "pl pl imgpri imgpri   imgpri   e4       about    about    about    pr pr"
+    "pl pl imgpri imgpri   imgpri   e4       imgsec   imgsec   imgsec   pr pr"
+    "pl pl imgpri imgpri   imgpri   e4       imgsec   imgsec   imgsec   pr pr"
+    "pl pl dots2  playjoin playjoin playjoin playdate playdate playdate pr pr"
+  ;
+  align-items: center;
+}
+
+.o-main--grid__image--primary {
+  grid-area: imgpri;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    max-height: 100%;  
+  }
+}
+
+.o-main--grid__image--secondary {
+  grid-area: imgsec;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.o-main--grid__intro {
+  grid-area: intro;
+  align-self: self-end;
+
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.o-main--grid__title {
+  grid-area: title;
+  
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+    
+.o-main--grid__join {
+  grid-area: join;
+  align-self: self-start;
+  border-left: 2px solid orange;
+  padding-left: 10px;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+.o-main--grid__about {
+  grid-area: about;
+}
+
+.o-main--grid__dots {
+  height: 100%;
+  background-image: radial-gradient(orange 1px, transparent 0);
+  background-size: 5px 5px;
+  background-position: -2px -2px;
+
+  &-one {
+    grid-area: dots1;
+  }
+  &-two {
+    grid-area: dots2;
+  }
+}
+
+.o-main--grid__play-join {
+  grid-area: playjoin;
+  align-self: self-end;
+  text-align: right;
+  border-right: 2px solid orange;
+  padding-right: 10px;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+.o-main--grid__play-date {
+  grid-area: playdate;
+  align-self: self-end;
+  text-align: right;
+
+  h5 {
+    padding-top: 10px;
+    font-weight: 600;
+    line-height: 1rem;
+  }
+
+  p {
+    line-height: 0;
+  }
+}

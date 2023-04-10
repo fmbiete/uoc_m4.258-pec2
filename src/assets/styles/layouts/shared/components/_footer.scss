@@ -3,10 +3,36 @@
 \*------------------------------------*/
 
 .o-footer {
-  
+  img {
+    height: 50px;
+  }
+}
+
+.o-footer-dark {
+  background-color: $uoc-bg;
 }
 
 .o-footer__copy {
   background-color: $uoc-corporate;
   color: white;
+  font-weight: 600;
+
+  img {
+    padding: 0 1em 0 1em;
+    width: 300px;
+    height: 100%;
+  }
+}
+
+.o-footer__menu {
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5em 0 5em;
+  padding: 1rem 0 1rem 0;
+}
+
+.o-footer__social {
+  li {
+    margin-left: 1em;
+  }
 }

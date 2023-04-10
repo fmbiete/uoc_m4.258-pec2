@@ -6,25 +6,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-  <title>PEC2</title>
+  <title>M4.258 Herramientas HTML y CSS II - PEC2</title>
 </head>
 
-<body>
+<body class="o-main">
   <include src="./views/header.html"></include>
-  <div class="uoc-container">
-    <picture>
-      <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-      <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-    </picture>
-    <h1 class="uoc-title">Hello, UOC!</h1>
-    <p>
-      This is a starter template for the Advanced HTML and CSS Tools courses
-      from the Master's Program in Multimedia Applications and the Master's
-      Program in Web App and Website Development at the Universitat Oberta de
-      Catalunya.
-    </p>
-  </div>
-  <include src="./views/footer.html"></include>
+  <main class="d-flex justify-content-center">
+    <div class="o-main--grid">
+      <div class="o-main--grid__intro">
+        <h2>Chess Club</h2>
+      </div>
+      <div class="o-main--grid__title">
+        <h1>I love Chess</h1>
+      </div>
+      <div class="o-main--grid__join">
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-arrow-right me-3"></i>Join the Club</a>
+      </div>
+      <div class="o-main--grid__about">
+        <h4>About</h4>
+        <p>We love chess and we are proud of it. If you are a little crazy about chess, in the right way, come to join
+          us
+          or just pop up for a quick game. We also provide free lessons on Saturday afternoon.</p>
+      </div>
+      <div class="o-main--grid__image--primary"><img src="assets/images/800-chess.jpg" alt="Chess image"></div>
+      <div class="o-main--grid__play-join">
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-arrow-right me-3"></i>Join Next
+          Competition</a>
+      </div>
+      <div class="o-main--grid__play-date">
+        <h5>Dublin Convention Center</h5>
+        <p>2023/01/01</p>
+      </div>
+      <div class="o-main--grid__image--secondary"><img src="assets/images/800-prizes.jpg" alt="Competition Prizes">
+      </div>
+      <div class="o-main--grid__dots o-main--grid__dots-one"></div>
+      <div class="o-main--grid__dots o-main--grid__dots-two"></div>
+    </div>
+  </main>
+  <include src="./views/footer.html" locals='{ "subclass": "o-footer-dark" }'></include>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 
