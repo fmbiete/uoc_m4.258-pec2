@@ -11,10 +11,9 @@
 
 <body>
   <include src="./views/header.html"></include>
-  <header>
+  <main class="o-main">
     <h1 class="display-1 text-center my-5">Chess Club Members</h1>
-  </header>
-  <main class="d-flex justify-content-center mx-5">
+
     <div class="o-grid-members">
       <!-- Member -->
       <div class="m-member card">
@@ -97,20 +96,22 @@
         </div>
       </div>
     </div>
+
+    <div class="mt-5 text-center">
+      <p class="text-muted">Only members with a rating higher than 1600 are listed in this page.</p>
+      <p class="display-3 my-5">Keep playing your best and you will soon be here!</p>
+      <figure class="mt-5">
+        <blockquote class="blockquote">
+          <p>The great thing about chess is it's a game for oneself. You don't work on what you can't control, you just
+            work on yourself. And I think if more people did that, we'd all be a lot better off.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Daniel Naroditsky
+        </figcaption>
+      </figure>
+    </div>
   </main>
-  <footer class="mt-5 text-center">
-    <p class="text-muted">Only members with a rating higher than 1600 are listed in this page.</p>
-    <p class="display-3 my-5">Keep playing your best and you will soon be here!</p>
-    <figure class="mt-5">
-      <blockquote class="blockquote">
-        <p>The great thing about chess is it's a game for oneself. You don't work on what you can't control, you just
-          work on yourself. And I think if more people did that, we'd all be a lot better off.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        Daniel Naroditsky
-      </figcaption>
-    </figure>
-  </footer>
+
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
