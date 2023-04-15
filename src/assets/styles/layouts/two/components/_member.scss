@@ -3,6 +3,14 @@
 \*------------------------------------*/
 
 .m-member {
-  width: 300px;
-  margin-bottom: 2em;
+  max-width: 400px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 100% 0;
+  }
 }
