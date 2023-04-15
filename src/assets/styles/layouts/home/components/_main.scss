@@ -9,6 +9,7 @@
 
 .o-main--grid {
   margin: 100;
+  max-width: 1000px;
 
   display: grid;
 
@@ -17,17 +18,18 @@
   // grid-auto-rows: 100px;
   
   grid-template-columns: 1fr 2fr 2fr 1fr 2fr 2fr 2fr;
-  grid-template-rows: masonry;
+  // grid-template-rows: masonry;
+  grid-template-rows: repeat(8, max-content);
   grid-gap: 10px;
   grid-template-areas: 
-    "dots1  dots1  intro    intro    dots3   lessons lessons"
-    "dots1  dots1  title    title    dots3   dots2   dots2"
-    "book   book   title    title    dots3   dots2   dots2"
-    "imgpri imgpri imgpri   none     dots3   about   about"
-    "imgpri imgpri imgpri   join     dots3   about   about"
+    "dots1  dots1  intro    intro    dots6   lessons lessons"
+    "dots1  dots1  dots7    title    title   title   dots2"
+    "book   book   dots7    title    title   title   dots2"
+    "imgpri imgpri imgpri   dots3     dots3   about   about"
+    "imgpri imgpri imgpri   join     join   about   about"
     "imgpri imgpri imgpri   dots5    imgsec  imgsec  imgsec"
     "imgpri imgpri imgpri   dots5    imgsec  imgsec  imgsec"
-    "dots4  dots4  playjoin playjoin playloc playloc playdate"
+    "dots4  playjoin  playjoin playjoin playloc playloc playdate"
   ;
   align-items: center;
 
@@ -69,7 +71,7 @@
 
 .o-main--grid__intro {
   grid-area: intro;
-  text-align: center;
+  text-align: left;
 
   h2 {
     font-weight: 900;
@@ -78,7 +80,7 @@
 
 .o-main--grid__title {
   grid-area: title;
-  text-align: center;
+  text-align: right;
   
   h1 {
     font-weight: 900;
@@ -119,6 +121,12 @@
   }
   &-five {
     grid-area: dots5;
+  }
+  &-six {
+    grid-area: dots6;
+  }
+  &-seven {
+    grid-area: dots7;
   }
 }
 
