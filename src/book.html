@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>M4.258 Herramientas HTML y CSS II - PEC2</title>
+</head>
+
+<body>
+  <include src="./views/header.html"></include>
+  <main class="o-main">
+    <h1 class="text-center">Book a Game</h1>
+
+    <div id="confirmation"></div>
+
+    <form class="needs-validation" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" name="number" id="number" class="form-control" required>
+        <label for="number">Member Number</label>
+        <div class="invalid-feedback">Please, introduce your Member Number</div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" name="name" id="name" class="form-control" required>
+        <label for="name">Full Name</label>
+        <div class="invalid-feedback">Please, introduce your Full Name</div>
+      </div>
+      <div class="form-floating mb-3">
+        <select name="select" id="select" class="form-select" required>
+          <option value="">Select Game Type</option>
+          <option value="o1">Simple Game</option>
+          <option value="o2">Double Game</option>
+          <option value="o3">Triple Game</option>
+        </select>
+        <label for="select">Game Type</label>
+        <div class="invalid-feedback">Please, select the desired Game Type</div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" name="days" id="days" class="form-control" required>
+        <label for="days">Preferred Days</label>
+        <div class="invalid-feedback">Please, select up to 3 days</div>
+      </div>
+      <div class="form-check mb-3">
+        <input type="checkbox" name="confirm" id="confirm" class="form-check-input" required>
+        <label for="confirm" class="form-check-label">I authorize Club management to contact me to arrange the
+          Game</label>
+        <div class="invalid-feedback">Please, you must agree before submitting</div>
+      </div>
+      <div class="row mt-5 justify-content-between">
+        <button class="col-4 btn btn-secondary" type="reset">Clear</button>
+        <button class="col-4 btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  <script type="module" src="./assets/scripts/layouts/book/components/daypicker/daypicker.js"></script>
+  <script type="module" src="./assets/scripts/layouts/book/components/form/validation.js"></script>
+</body>
+
+</html>
