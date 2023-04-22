@@ -10,3 +10,11 @@ $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
+
+// Bootstrap customizations
+$headings-font-family: "Caveat", $font-family-sans-serif;
+$headings-font-weight:        700;
+
+// $theme-colors: (
+//  "primary": #fabada // pon el código de color que prefieras
+// );
