@@ -11,34 +11,37 @@
 
 <body>
   <include src="./views/header.html"></include>
-  <main class="o-main-four">
-    <h1 class="display-1 text-center mb-5">Play a Game</h1>
+  <main class="w-75 mx-auto">
+    <h1 class="display-1 text-center mt-5">Play a Game</h1>
     <div class="row">
-      <div class="col">
-        <div class="o-chess" id="chess-board"></div>
+      <div class="col-md-6 col-sm-12 col-xs-12 mt-3">
+        <div id="chess-board"></div>
       </div>
-      <div class="col">
-        <button class="btn btn-primary" id="btnStart"><i class="fa fa-play me-2"></i>Start New
-          Game</button>
-        <div class="form-floating mt-2">
-          <select name="difficulty" id="difficulty" class="form-select">
-            <option value="1">Easiest</option>
-            <option value="2">Easy</option>
-            <option value="3" selected>Normal</option>
-            <option value="4">Hard</option>
-            <option value="5">Hardest</option>
-          </select>
-          <label for="difficulty">AI Difficulty</label>
+      <div class="text-md-center col-md-6 col-sm-12 col-xs-12 mt-3">
+        <!-- col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12  -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary" id="btnStart"><i class="fa fa-play me-2"></i>Start New
+            Game</button>
+          <div class="form-floating">
+            <select name="difficulty" id="difficulty" class="form-select">
+              <option value="1">Easiest</option>
+              <option value="2">Easy</option>
+              <option value="3" selected>Normal</option>
+              <option value="4">Hard</option>
+              <option value="5">Hardest</option>
+            </select>
+            <label for="difficulty">AI Difficulty</label>
+          </div>
+          <h3>Status</h3>
+          <ul class="list-group list-group-flush rounded text-md-start">
+            <li class="list-group-item">Turn: <b id="turn">White</b></li>
+            <li class="list-group-item">Status: <b id="status">Ready</b></li>
+          </ul>
+          <h3>Game Log</h3>
+          <button class="btn btn-secondary" id="btnUndo"><i class="fa fa-undo me-2"></i>Undo Last
+            Move</button>
+          <textarea name="log" id="log" rows="10" disabled></textarea>
         </div>
-        <h3 class="mt-3">Status</h3>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Turn: <b id="turn">White</b></li>
-          <li class="list-group-item">Status: <b id="status">Ready</b></li>
-        </ul>
-        <h3 class="mt-3">Game Log</h3>
-        <button class="btn btn-secondary" id="btnUndo"><i class="fa fa-undo me-2"></i>Undo Last
-          Move</button>
-        <textarea class="mt-2" name="log" id="log" cols="30" rows="10" disabled></textarea>
       </div>
     </div>
 

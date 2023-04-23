@@ -22,7 +22,7 @@ const chessboard = new Chessboard(elChessBoard, {
   position: FEN.start,
   orientation: COLOR.white,
   assetsUrl: "./cm-chessboard/",
-  responsive: true,
+  // responsive: true,
   style: {
     aspectRatio: 1.0,
     showCoordinates: true,
