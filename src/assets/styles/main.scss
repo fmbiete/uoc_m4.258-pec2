@@ -20,6 +20,8 @@
  @import "bootstrap/scss/bootstrap";
  @import "vanillajs-datepicker/sass/datepicker";
  @import "vanillajs-datepicker/sass/datepicker-bs5";
+
+ @import "cm-chessboard/assets/chessboard";
  
 /**
  * Import layouts
@@ -29,6 +31,7 @@
 @import "layouts/home";
 @import "layouts/two";
 @import "layouts/three";
+@import "layouts/four";
 
 /**
  * Do NOT include anything else in this file!

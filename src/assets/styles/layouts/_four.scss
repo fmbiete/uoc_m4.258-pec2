@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 // ITCSS - Generic - Generic styles
-@import "three/generics";
+// @import "three/generics";
 
 // // ITCSS - Elements - Styles for some tags
 // @import "home/elements/cites";
@@ -16,7 +16,8 @@
 // @import "home/objects/fonts";
 
 // ITCSS - Components in the page
-@import 'three/components/main';
+@import 'four/components/main';
+@import 'four/components/chess';
 // @import 'home/components/summary';
 // @import 'home/components/gallery';
 // @import 'home/components/footnotes';

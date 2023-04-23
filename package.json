@@ -23,8 +23,8 @@
     }
   },
   "staticFiles": {
-    "staticPath": "src/assets/images/p4wn",
-    "staticOutPath": "p4wn"
+    "staticPath": "node_modules/cm-chessboard/assets",
+    "staticOutPath": "cm-chessboard"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,7 @@
     "parcel-reporter-static-files-copy": "^1.5.0",
     "postcss-preset-env": "^7.8.3",
     "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
     "rimraf": "^3.0.2",
     "sharp": "0.31.1",
     "stylelint": "^15.4.0",
@@ -57,7 +58,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
+    "@ibrahimdeniz/chess-js": "^0.1.2",
     "@popperjs/core": "^2.11.7",
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "cm-chessboard": "^7.3.14"
   }
 }
