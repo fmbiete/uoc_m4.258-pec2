@@ -6,31 +6,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-  <link rel="stylesheet" type="text/css" href="./assets/styles/layouts/four/components/p4wn.css">
-  <title>PEC2</title>
+  <title>M4.258 Herramientas HTML y CSS II - PEC2</title>
 </head>
 
 <body>
   <include src="./views/header.html"></include>
-  <main class="o-main">
-    <div id="chess-board"></div>
-    <!-- <div class="row">
-      <!-- <div id="p4wn-board" class="col-12"></div> -->
-    <!-- </div> -->
+  <main class="o-main-four">
+    <h1 class="display-1 text-center mb-5">Play a Game</h1>
+    <div class="row">
+      <div class="col">
+        <div class="o-chess" id="chess-board"></div>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" id="btnStart"><i class="fa fa-play me-2"></i>Start New
+          Game</button>
+        <div class="form-floating mt-2">
+          <select name="difficulty" id="difficulty" class="form-select">
+            <option value="1">Easiest</option>
+            <option value="2">Easy</option>
+            <option value="3" selected>Normal</option>
+            <option value="4">Hard</option>
+            <option value="5">Hardest</option>
+          </select>
+          <label for="difficulty">AI Difficulty</label>
+        </div>
+        <h3 class="mt-3">Status</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Turn: <b id="turn">White</b></li>
+          <li class="list-group-item">Status: <b id="status">Ready</b></li>
+        </ul>
+        <h3 class="mt-3">Game Log</h3>
+        <button class="btn btn-secondary" id="btnUndo"><i class="fa fa-undo me-2"></i>Undo Last
+          Move</button>
+        <textarea class="mt-2" name="log" id="log" cols="30" rows="10" disabled></textarea>
+      </div>
+    </div>
+
   </main>
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  <!-- <script src="./assets/scripts/layouts/four/components/chess/engine.js"></script> -->
-  <!-- <script src="./assets/scripts/layouts/four/components/chess/display.js"></script> -->
-  <!-- <script>
-    P4WN_IMAGE_DIR = "/p4wn";
-    var board = p4wnify("p4wn-board");
-    board.next_move();
-  </script> -->
   <script type="module" src="./assets/scripts/layouts/four/components/chessboard/board.js"></script>
-  <script>
-
-  </script>
 </body>
 
 </html>

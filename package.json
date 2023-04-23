@@ -23,8 +23,8 @@
     }
   },
   "staticFiles": {
-    "staticPath": "src/assets/images/p4wn",
-    "staticOutPath": "p4wn"
+    "staticPath": "node_modules/cm-chessboard/assets",
+    "staticOutPath": "cm-chessboard"
   },
   "repository": {
     "type": "git",
