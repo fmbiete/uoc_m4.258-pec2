@@ -34,7 +34,15 @@
         <p>We love chess. If you also are crazy about chess, join us, book a game or enter
           our next competition. If you are a newbie, join our free lessons.</p>
       </div>
-      <div class="o-grid__image--primary"><img src="assets/images/800-chess.jpg" alt="Chess image"></div>
+      <div class="o-grid__image--primary">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="assets/images/1746-chess.jpg?as=webp" type="image/webp">
+          <source media="(min-width: 640px)" srcset="assets/images/800-chess.jpg?as=webp" type="image/webp">
+          <source media="(min-width: 320px)" srcset="assets/images/400-chess.jpg?as=webp" type="image/webp">
+          <img src="assets/images/1746-chess.jpg" alt="Chess image">
+        </picture>
+      </div>
+
       <div class="o-grid__play-join o-grid__action o-grid__action-right">
         <a href="#">Join Next Competition<i class="fa fa-arrow-left ms-3"></i></a>
       </div>
@@ -42,9 +50,15 @@
         <h5>Dublin Convention Center</h5>
       </div>
       <div class="o-grid__play-date">
-        2023/01/01
+        2023 Jan 1st
       </div>
-      <div class="o-grid__image--secondary"><img src="assets/images/800-prizes.jpg" alt="Competition Prizes">
+      <div class="o-grid__image--secondary">
+        <picture>
+          <source media="(min-width: 640px)" srcset="assets/images/800-prizes.jpg?as=webp" type="image/webp">
+          <source media="(min-width: 320px)" srcset="assets/images/400-prizes.jpg?as=webp" type="image/webp">
+          <img src="assets/images/800-prizes.jpg" alt="Competition Prizes">
+        </picture>
+
       </div>
       <div class="o-grid__dots o-grid__dots-one"></div>
       <div class="o-grid__dots o-grid__dots-two"></div>
