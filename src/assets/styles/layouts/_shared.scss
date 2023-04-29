@@ -5,21 +5,18 @@
 // ITCSS - Generic - Generic styles
 @import "shared/generics";
 
-// // ITCSS - Elements - Styles for some tags
-// @import "home/elements/cites";
-// @import "home/elements/headings";
-// @import "home/elements/links";
-// @import "home/elements/pictures";
+
+// ITCSS - Elements - Styles for some tags
 
 
 // ITCSS - Objects
 @import "shared/objects/fonts";
 
 
-// ITCSS - Components in the page
+// ITCSS - Components in the pages
 @import 'shared/components/header';
 @import 'shared/components/main';
-// @import 'home/components/summary';
-// @import 'home/components/gallery';
-// @import 'home/components/footnotes';
 @import 'shared/components/footer';
+
+
+// ITCSS - Utilities
