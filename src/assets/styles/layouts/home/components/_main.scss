@@ -2,7 +2,7 @@
   # Component - Main
 \*------------------------------------*/
 
-.o-main--grid {
+.o-grid {
   margin: 100;
   max-width: 1000px;
 
@@ -33,7 +33,7 @@
 }
 
 @media only screen and (max-width: map-get($container-max-widths, "md")) {
-  .o-main--grid {
+  .o-grid {
     margin: 10px;
 
     grid-template-columns: repeat(4, 1fr);
@@ -53,15 +53,15 @@
   }
 }
 
-.o-main--grid__book {
+.o-grid__book {
   grid-area: book;
 }
 
-.o-main--grid__lessons {
+.o-grid__lessons {
   grid-area: lessons;
 }
 
-.o-main--grid__image--primary {
+.o-grid__image--primary {
   grid-area: imgpri;
   overflow: hidden;
 
@@ -71,7 +71,7 @@
   }
 }
 
-.o-main--grid__image--secondary {
+.o-grid__image--secondary {
   grid-area: imgsec;
   overflow: hidden;
 
@@ -82,7 +82,7 @@
   }
 }
 
-.o-main--grid__intro {
+.o-grid__intro {
   grid-area: intro;
   text-align: left;
 
@@ -91,7 +91,7 @@
   }
 }
 
-.o-main--grid__title {
+.o-grid__title {
   grid-area: title;
   text-align: right;
   
@@ -101,11 +101,11 @@
   }
 }
     
-.o-main--grid__join {
+.o-grid__join {
   grid-area: join;
 }
 
-.o-main--grid__about {
+.o-grid__about {
   grid-area: about;
   font-weight: 300;
 
@@ -114,7 +114,7 @@
   }
 }
 
-.o-main--grid__dots {
+.o-grid__dots {
   height: 100%;
   background-image: radial-gradient($uoc-bg 1px, transparent 0);
   background-size: 5px 5px;
@@ -143,15 +143,15 @@
   }
 }
 
-.o-main--grid__play-join {
+.o-grid__play-join {
   grid-area: playjoin;
 }
 
-.o-main--grid__play-date {
+.o-grid__play-date {
   grid-area: playdate;
 }
 
-.o-main--grid__play-loc {
+.o-grid__play-loc {
   grid-area: playloc;
   text-align: right;
 
@@ -161,7 +161,7 @@
   }
 }
 
-.o-main--grid__action {
+.o-grid__action {
   a {
     text-transform: uppercase;
     text-decoration: none;
