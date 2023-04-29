@@ -9,6 +9,7 @@
   display: grid;
   
   grid-template-columns: 1fr 2fr 2fr 1fr 2fr 2fr 2fr;
+  // Not supported in most browsers
   // grid-template-rows: masonry;
   grid-template-rows: repeat(8, max-content);
   grid-gap: 10px;
@@ -28,6 +29,27 @@
 
   > * {
     min-width: 0px;
+  }
+}
+
+@media only screen and (max-width: map-get($container-max-widths, "md")) {
+  .o-main--grid {
+    margin: 10px;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, max-content);
+    grid-gap: 0;
+    grid-column-gap: 10px;
+    grid-template-areas: 
+    "dots1 dots1 lessons lessons"
+    "dots2 intro intro dots3"
+    "title title dots4 join"
+    "dots5 imgpri imgpri imgpri"
+    "book imgpri imgpri imgpri"
+    "about about about about"
+    "imgsec imgsec imgsec dots6"
+    "playdate playloc playjoin playjoin"
+    ;
   }
 }
 
@@ -154,5 +176,11 @@
     text-align: right;
     border-right: 2px solid orange;
     padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: map-get($container-max-widths, "md")) {
+  a {
+    font-size: smaller;
   }
 }
