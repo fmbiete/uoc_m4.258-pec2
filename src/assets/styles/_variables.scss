@@ -5,16 +5,27 @@ $font-family-sans-serif: "Montserrat", "-apple-system", "BlinkMacSystemFont", "S
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
-$mqMinWidth: 420px;
-
 // Bootstrap customizations
-$headings-font-family: "Caveat", $font-family-sans-serif;
-$headings-font-weight:        700;
 
-// $theme-colors: (
-//  "primary": #fabada // pon el código de color que prefieras
-// );
+// Override headers font
+$headings-font-family: "Caveat", $font-family-sans-serif;
+$headings-font-weight: 700;
+
+// Override theme colors
+$theme-colors: (
+  "primary":#563d7c,
+  "secondary":#868e96,
+  "success":#28a745,
+  "danger":#dc3545,
+  "info":#17a2b8,
+  "warning":#ffc107,
+  "light":#f8f9fa,
+  "dark":#343434
+);
+
+// Override background and color for body
+$body-bg: color.scale(#73edff, $lightness: 70%);
+$body-color: #000078;
+
+// Override input controls background (uses body-bg as default)
+$input-bg: #f8f9fa;
